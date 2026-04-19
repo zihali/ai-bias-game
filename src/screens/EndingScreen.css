@@ -1,0 +1,24 @@
+.ending-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(170deg, #060a14, #0c1222);
+  text-align: center;
+  padding: 2rem;
+}
+
+.ending-screen h1 {
+  color: #d0d8f0;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.ending-sub {
+  max-width: 520px;
+  color: rgba(180, 200, 240, 0.7);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}

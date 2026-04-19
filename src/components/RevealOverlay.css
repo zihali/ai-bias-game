@@ -1,0 +1,61 @@
+.reveal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 8, 18, 0.88);
+  animation: fadeIn 0.3s ease-out;
+  padding: 2rem;
+}
+
+.reveal-card {
+  background: rgba(20, 24, 46, 0.95);
+  border: 1px solid rgba(255, 100, 100, 0.35);
+  border-radius: 16px;
+  padding: 2.4rem 2.8rem;
+  max-width: 640px;
+  width: 100%;
+  color: #e4e8f0;
+  box-shadow: 0 0 60px rgba(255, 60, 60, 0.12);
+  animation: revealPop 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.4rem;
+  color: #ff8080;
+}
+
+.reveal-card p {
+  line-height: 1.7;
+  font-size: 0.98rem;
+  color: rgba(220, 225, 240, 0.85);
+}
+
+.reveal-dismiss {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid rgba(120, 180, 255, 0.4);
+  background: rgba(60, 120, 220, 0.15);
+  color: #90c0ff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reveal-dismiss:hover {
+  background: rgba(60, 120, 220, 0.3);
+}
+
+@keyframes revealPop {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

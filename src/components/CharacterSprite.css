@@ -1,0 +1,40 @@
+.character-sprite {
+  position: fixed;
+  bottom: 180px;
+  z-index: 90;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  animation: slideUp 0.5s ease-out;
+}
+
+.character-sprite.pos-left   { left: 4vw; }
+.character-sprite.pos-center { left: 50%; transform: translateX(-50%); }
+.character-sprite.pos-right  { right: 4vw; }
+
+.sprite-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(20, 20, 50, 0.7);
+  border: 1px solid rgba(120, 180, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.sprite-face {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.sprite-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(160, 190, 240, 0.7);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

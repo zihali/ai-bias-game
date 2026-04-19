@@ -1,0 +1,78 @@
+/* ── Dialogue overlay ── */
+
+.dialogue-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem;
+  cursor: pointer;
+  /* subtle dark scrim so the scene behind is still visible */
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.55));
+  animation: fadeIn 0.25s ease-out;
+}
+
+.dialogue-box {
+  width: min(720px, 92vw);
+  background: rgba(15, 15, 30, 0.92);
+  border: 1px solid rgba(120, 180, 255, 0.3);
+  border-radius: 12px;
+  padding: 1.4rem 1.8rem 1rem;
+  color: #e8eaf0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* ── Speaker label ── */
+.dialogue-speaker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+
+.dialogue-speaker.guide {
+  background: rgba(90, 160, 255, 0.25);
+  color: #7cb8ff;
+}
+
+.dialogue-speaker.player {
+  background: rgba(100, 240, 180, 0.2);
+  color: #74e6a8;
+}
+
+/* ── Body text ── */
+.dialogue-text {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  min-height: 3.2em;
+  margin: 0;
+}
+
+/* ── Continue indicator ── */
+.dialogue-continue {
+  display: block;
+  text-align: right;
+  font-size: 0.72rem;
+  color: rgba(200, 210, 230, 0.55);
+  margin-top: 0.5rem;
+  animation: pulse 1.2s infinite;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}

@@ -1,0 +1,57 @@
+.title-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(170deg, #080c18, #0f1628 50%, #0a0f1c);
+  position: relative;
+}
+
+.title-content {
+  text-align: center;
+}
+
+.title-main {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #e0e6f4;
+  margin: 0;
+  letter-spacing: -0.02em;
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+.title-sub {
+  font-size: 1.05rem;
+  color: rgba(180, 200, 240, 0.6);
+  margin: 0.7rem 0 2.4rem;
+}
+
+.title-start {
+  padding: 0.8rem 2.8rem;
+  font-size: 1.05rem;
+  border: 1px solid rgba(120, 180, 255, 0.4);
+  background: rgba(60, 120, 220, 0.12);
+  color: #a0c8ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+
+.title-start:hover {
+  background: rgba(60, 120, 220, 0.28);
+  transform: scale(1.04);
+}
+
+.title-footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.75rem;
+  color: rgba(140, 160, 200, 0.4);
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 12px rgba(100, 160, 255, 0.2); }
+  to   { text-shadow: 0 0 28px rgba(100, 160, 255, 0.45); }
+}
