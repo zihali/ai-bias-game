@@ -1,4 +1,4 @@
-/* ©¤©¤ Global Reset & Base Styles ©¤©¤ */
+/* Global Reset and Base Styles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ button {
   cursor: pointer;
 }
 
-/* ©¤©¤ Shared utility: interaction placeholder ©¤©¤ */
+/* Shared utility: interaction placeholder */
 .interaction-placeholder {
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ button {
   min-height: 220px;
 }
 
-/* ©¤©¤ Reuse title-start button style anywhere ©¤©¤ */
+/* Reuse title-start button style anywhere */
 .title-start {
   padding: 0.7rem 2.2rem;
   font-size: 0.95rem;
