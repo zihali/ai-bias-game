@@ -1,0 +1,139 @@
+.ch2-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 640px;
+  transition: outline 0.1s;
+}
+
+.ch2-layout.alarm {
+  outline: 2px solid #ff5060;
+  border-radius: 8px;
+  animation: alarmFlash 0.15s steps(1) 4;
+}
+
+@keyframes alarmFlash {
+  0%, 100% { outline-color: #ff5060; }
+  50% { outline-color: transparent; }
+}
+
+.ch2-header {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: rgba(100, 160, 255, 0.6);
+  border-bottom: 1px solid rgba(100, 160, 255, 0.12);
+  padding-bottom: 0.5rem;
+}
+
+.ch2-alarm {
+  color: #ff5060;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  animation: fadeSlide 0.2s ease-out;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ch2-meters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ch2-meter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ch2-meter-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  color: rgba(180, 200, 240, 0.7);
+}
+
+.ch2-z-tag {
+  color: rgba(255, 180, 60, 0.7);
+  font-size: 0.63rem;
+}
+
+.ch2-bar-track {
+  height: 18px;
+  background: rgba(20, 30, 50, 0.9);
+  border: 1px solid rgba(100, 150, 255, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ch2-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.ch2-meter-pct {
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: color 0.25s;
+}
+
+.ch2-target {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: rgba(180, 200, 180, 0.4);
+  margin-top: 0.2rem;
+}
+
+.ch2-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ch2-slider-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: rgba(160, 200, 240, 0.7);
+  gap: 0.4rem;
+}
+
+.ch2-slider-label input[type='range'] {
+  width: 100%;
+  accent-color: #6090ff;
+}
+
+.ch2-slider-label.locked {
+  opacity: 0.35;
+}
+
+.ch2-give-up {
+  align-self: flex-start;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid rgba(255, 80, 96, 0.45);
+  background: rgba(255, 80, 96, 0.07);
+  color: #ff8090;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ch2-give-up:hover {
+  background: rgba(255, 80, 96, 0.16);
+}
+
+.ch2-locked-note {
+  font-size: 0.72rem;
+  color: #ff5060;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 80, 96, 0.3);
+  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+}

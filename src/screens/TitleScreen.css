@@ -5,53 +5,78 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(170deg, #080c18, #0f1628 50%, #0a0f1c);
+  background: #050810;
   position: relative;
+  gap: 2rem;
+}
+
+/* Boot terminal block */
+.title-boot {
+  font-size: 0.8rem;
+  color: #4aff91;
+  line-height: 1.9;
+  text-align: left;
+  width: min(480px, 90vw);
+  min-height: 9rem;
+}
+
+.boot-line {
+  animation: fadeSlide 0.3s ease-out;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .title-content {
   text-align: center;
+  animation: fadeSlide 0.5s ease-out;
 }
 
 .title-main {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #e0e6f4;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   animation: textGlow 3s ease-in-out infinite alternate;
 }
 
 .title-sub {
-  font-size: 1.05rem;
-  color: rgba(180, 200, 240, 0.6);
-  margin: 0.7rem 0 2.4rem;
+  font-size: 0.85rem;
+  color: rgba(120, 180, 255, 0.7);
+  margin: 0.6rem 0 2rem;
+  letter-spacing: 0.06em;
 }
 
 .title-start {
-  padding: 0.8rem 2.8rem;
-  font-size: 1.05rem;
-  border: 1px solid rgba(120, 180, 255, 0.4);
-  background: rgba(60, 120, 220, 0.12);
-  color: #a0c8ff;
-  border-radius: 10px;
+  padding: 0.75rem 2.4rem;
+  font-size: 0.95rem;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(74, 255, 145, 0.5);
+  background: rgba(74, 255, 145, 0.07);
+  color: #4aff91;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.25s, transform 0.15s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
 .title-start:hover {
-  background: rgba(60, 120, 220, 0.28);
-  transform: scale(1.04);
+  background: rgba(74, 255, 145, 0.15);
+  box-shadow: 0 0 16px rgba(74, 255, 145, 0.25);
 }
 
 .title-footer {
   position: absolute;
-  bottom: 2rem;
-  font-size: 0.75rem;
-  color: rgba(140, 160, 200, 0.4);
+  bottom: 1.5rem;
+  font-size: 0.72rem;
+  color: rgba(120, 160, 200, 0.35);
+  letter-spacing: 0.08em;
 }
 
 @keyframes textGlow {
-  from { text-shadow: 0 0 12px rgba(100, 160, 255, 0.2); }
-  to   { text-shadow: 0 0 28px rgba(100, 160, 255, 0.45); }
+  from { text-shadow: 0 0 12px rgba(100, 160, 255, 0.3); }
+  to   { text-shadow: 0 0 30px rgba(100, 160, 255, 0.6); }
 }
